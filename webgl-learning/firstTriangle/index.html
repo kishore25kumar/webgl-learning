@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D triangle</title>
+</head>
+<body>
+    <canvas id="3dCanvas" style="position: absolute; background-color: red;"></canvas>
+</body>
+<script type="x-shader/x-vertex" id="vertexShader">
+    attribute vec2 position;
+
+    void main(void) {
+        gl_Position = vec4(position, 0.0, 1.0);
+    }
+</script>
+<script type="x-shader/x-fragment" id="fragmentShader">
+    precision mediump float;
+
+    void main(void) {
+        gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
+    }
+</script>
+<script src="script.js"></script>
+</html>
